@@ -1,11 +1,7 @@
 .gifts-for-all {
-  display: grid;
-  grid-template:
-    "heading"
-    "description"
-    "card" /
-    1fr;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gifts-for-all-heading {
@@ -13,7 +9,6 @@
   font-size: 3.2em;
   line-height: 1.19;
   margin-top: 96px;
-  grid-area: heading;
 }
 
 .gifts-for-all-text {
@@ -23,11 +18,9 @@
   text-align: center;
   width: 952px;
   margin-top: 23px;
-  grid-area: description;
 }
 
 nav {
-  grid-area: card;
   margin-top: 64px;
 }
 .gifts-for-all-card {
@@ -40,19 +33,11 @@ nav {
   filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.05));
   background-color: #fafafa;
   width: 270px;
-
-  display: grid;
-  grid-template:
-    "image"
-    "description-card"
-    "link"/
-    1fr;
 }
 
 .gifts-for-all-card img {
   width: inherit;
   height: auto;
-  grid-area: image;
   margin-bottom: 24px;
 }
 
@@ -60,7 +45,6 @@ nav {
   font-weight: 300;
   font-size: 2em;
   line-height: 1.2;
-  grid-area: description-card;
   margin-bottom: 74px;
   margin-left: 24px;
 }
@@ -69,7 +53,8 @@ nav {
   font-weight: 300;
   font-size: 1.4em;
   line-height: 1.35;
-  margin-bottom: 24px;
-  grid-area: link;
+  margin-bottom: 20px;
   margin-left: 24px;
+  display: inline-block;
+  padding: 4px;
 }
